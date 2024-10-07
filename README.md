@@ -15,8 +15,11 @@ Materiais utilizados:
 -	1 Display LCD 16x2
      Métodos:
 O código foi desenvolvido para que o programa fique dentro da função de cada fase até que o usuário ganhe, desista ou perca. Dessa forma, foi colocado na função loop somente a verificação da variável global ‘fase’. Ou seja, se a fase for 1, 2 ou 3 a respectiva função é chamada e o programa ficará preso na função da fase até a vitória, derrota ou desistência do jogador.
+
 Na fase 1, o programa fica dentro de um while que verifica quantas jogadas foram feitas, se o jogador está acertando e em que fase está. Dentro do laço, apresenta-se a sequência que deve ser replicada e espera até que o jogador pressione um dos botões. Se o botão pressionado for correto continua. Caso tenha errado, para o laço e chama a função derrota a qual exibe no display que o jogador perdeu, emite um som e volta para o início.
+
 Na fase 2, há um laço for para percorrer no máximo 6 vezes, pois o usuário tem que responder à cinco perguntas e pode errar somente uma vez. Dentro desse for um valor aleatório é gerado e, se não for repetido, armazenado no vetor de perguntas usadas. Depois da sequência de displays, um laço while fica por 10 segundos esperando a resposta do usuário. Ao responder, adiciona no vetor de respostas do usuário e verifica se o vetor de respostas do jogador está igual ao de respostas corretas. Se sim, continua perguntando. Caso contrário, perde uma chance ou perde a fase.
+
 A última fase possui quase o mesmo funcionamento, porém não há chance extra. Portanto chama a função vitória ou derrota.
 
  ![circuitoCompleto](https://github.com/user-attachments/assets/7c29464b-8cfc-4759-b9c4-e6778bfc6dac)
@@ -54,6 +57,8 @@ Display final de vitória e com música no buzzer.
 ![vitoriaFase3](https://github.com/user-attachments/assets/1a5d3cf5-674c-4cdf-8bc5-d6a2416de5c8)
 
 Vídeo da simulação: https://www.youtube.com/watch?v=h-ndvkRsdEs 
+
 4.	Conclusão
 Apesar de ter sido divertido o desenvolvimento do projeto destaca-se algumas dificuldades encontradas durante o processo. Uma delas foi decidir qual botão utilizar com interrupção. Para isso, foi observado que o trabalho pedia para resetar o jogo a qualquer momento e, mesmo que o jogador tivesse que lidar com um delay, era melhor adotar interrupção somente no botão de reset. Outra dificuldade foi durante a fase 2 na parte de exibir o tempo restante para responder à pergunta. Como solução, a condição do laço while foi trocada para verificar somente os botões e dentro do laço há a verificação de exibição do tempo. O último contratempo foi para resetar adequadamente o jogo. Inicialmente o reset era dado pela fase colocada como 0, porém através dessa abordagem o display estava se misturando com o display de início de jogo. Para resolver isso foi usado um código que faz o Arduino começar a ler da linha 0 da memória.
+
 A partir desse projeto, foi possível reforçar os conhecimentos adquiridos em aula e, além disso, utilizar de conceitos novos para aprimorar o trabalho. Outro aspecto importante para destacar é a temática do projeto a qual foi bastante interessante e empolgante de ser trabalhada. Agradecemos pelo suporte dado pelos professores da disciplina e pela proposta do projeto como um todo.
