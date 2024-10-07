@@ -15,7 +15,7 @@ Materiais utilizados:
 -	1 Display LCD 16x2
 
 Métodos:
-O código foi desenvolvido para que o programa fique dentro da função de cada fase até que o usuário ganhe, desista ou perca. Dessa forma, foi colocado na função loop somente a verificação da variável global ‘fase’. Ou seja, se a fase for 1, 2 ou 3 a respectiva função é chamada e o programa ficará preso na função da fase até a vitória, derrota ou desistência do jogador.
+O código foi desenvolvido dentro da plataforma tinkercad, para que o programa fique dentro da função de cada fase até que o usuário ganhe, desista ou perca. Dessa forma, foi colocado na função loop somente a verificação da variável global ‘fase’. Ou seja, se a fase for 1, 2 ou 3 a respectiva função é chamada e o programa ficará preso na função da fase até a vitória, derrota ou desistência do jogador.
 
 Na fase 1, o programa fica dentro de um while que verifica quantas jogadas foram feitas, se o jogador está acertando e em que fase está. Dentro do laço, apresenta-se a sequência que deve ser replicada e espera até que o jogador pressione um dos botões. Se o botão pressionado for correto continua. Caso tenha errado, para o laço e chama a função derrota a qual exibe no display que o jogador perdeu, emite um som e volta para o início.
 
